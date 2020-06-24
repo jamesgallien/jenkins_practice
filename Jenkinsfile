@@ -12,10 +12,11 @@ pipeline {
                 sh 'python3 --version'
             }
         }
-        stage('sanity check')
+        stage('sanity check') {
             steps {
                 input 'Does everything look alright?'
             }
+        }
     }
     post {
         always {
